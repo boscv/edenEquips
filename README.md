@@ -141,10 +141,6 @@ HWID necessário para ativação.
 
 ---
 
-### 💵 Investimento 
-* **R$40** / **HWID** - Pagamento unico.
-
-
 ### 🚀 Implementações futuras
 
 * Quests do Éden faltantes dos níveis 12, 20 e 50.
