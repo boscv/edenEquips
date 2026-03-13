@@ -55,7 +55,7 @@ Plugin de injeção de eventMacros para Quests de Classe e Quests de Equipamento
 
 ---
 
-## ⚙️ Requisitos:
+### ⚙️ Requisitos:
 
   - Python
   - [Plugin eventMacros](https://github.com/OpenKore/openkore/tree/master/plugins/eventMacro) atualizado. 
