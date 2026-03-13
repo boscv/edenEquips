@@ -871,6 +871,11 @@ def allowed_with_empty(key):
     allowed = [str(v) for v in sorted(raw)]
     return [EMPTY_LABEL] + allowed
 
+def allowed_for_input(key):
+    """Somente valores reais para seleção no Combobox."""
+    raw = options[key]["allowed"]
+    return [str(v) for v in sorted(raw)]
+
 def write_block_to_config(lines_to_write, config_file=CONFIG_FILE):
     """Escreve/substitui o bloco no config.txt, ignorando (vazio) e 0."""
     filtered = []
@@ -1254,8 +1259,8 @@ class ConfigApp(tk.Tk):
                 self._apply_cb_style(key)
 
                 cb.bind("<<ComboboxSelected>>", lambda e, k=key: self._on_value_change(k))
-                cb.bind("<FocusIn>",           lambda e, k=key: self._focus_row(k))
-                cb.bind("<FocusOut>",          lambda e, k=key: self._validate_field(k))
+                cb.bind("<FocusIn>",           lambda e, k=key: self._on_focus_in(k))
+                cb.bind("<FocusOut>",          lambda e, k=key: self._on_focus_out(k))
                 cb.bind("<KeyRelease>",        lambda e, k=key: self._on_typing(k))
 
                 r += 1
@@ -1275,6 +1280,19 @@ class ConfigApp(tk.Tk):
 
     def _on_typing(self, key):
         self._apply_cb_style(key)
+
+    def _on_focus_in(self, key):
+        cb = self.inputs[key]
+        if cb.get().strip() == EMPTY_LABEL:
+            cb.set("")
+        self._apply_cb_style(key)
+        self._focus_row(key)
+
+    def _on_focus_out(self, key):
+        cb = self.inputs[key]
+        if not cb.get().strip():
+            cb.set(EMPTY_LABEL)
+        self._validate_field(key)
 
     def _focus_row(self, key):
         self.current_focus_key = key
