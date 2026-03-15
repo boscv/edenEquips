@@ -71,6 +71,7 @@ Plugin de injeção de eventMacros para Quests de Classe e Quests de Equipamento
     Nele, há explicações sobre cada configuração e suas respectivas funções.
   - Adicione *edenQuests* em **sys.txt** no final da linha *loadPlugins_list*.
   - Em caso de necessidade de reinjeção, use *'plugin reload edenQuests'* no console.
+  - É da responsabilidade do usuário definir [stats e skills](https://openkore.com/wiki/statsAddAuto), além da compra de itens fora de quests.
 
 ---
 
