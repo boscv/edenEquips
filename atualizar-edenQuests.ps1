@@ -1,10 +1,10 @@
 # atualizar-edenQuests.ps1
 # Atualiza a pasta onde este arquivo está com o conteúdo do repositório:
-# https://github.com/billabong93/edenQuests
+# https://github.com/boscv/edenQuests
 
 $ErrorActionPreference = 'Stop'
 
-$repoOwner = 'billabong93'
+$repoOwner = 'boscv'
 $repoName  = 'edenQuests'
 $branch    = 'main'
 
