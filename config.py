@@ -760,9 +760,9 @@ options = {
     "rota": {
         "group": "Rotas de UP",
         "label": "0-99",
-        "desc": "Rota 1:\nprt_fild08 > pay_fild08 > pay_fild07 > pay_fild09 > iz_dun01 > iz_dun02 > moc_fild17 > yuno_fild08 > yuno_fild11 > ve_fild07\n\nRota 2:\nprt_fild08 > pay_fild08 > pay_fild07 > pay_fild09 > gef_fild10 > orcsdun01 > mjolnir_08 > mjolnir_04 > gef_fild08 > gef_fild06\n\nOpções:\n0 = Desativado (padrão) \n1 = Rota 1\n2 = Rota 2",
+        "desc": "Rota 1:\nprt_fild08 > pay_fild08 > pay_fild07 > pay_fild09 > iz_dun01 > iz_dun02 > moc_fild17 > yuno_fild08 > yuno_fild11 > ve_fild07\n\nRota 2:\nprt_fild08 > pay_fild08 > pay_fild07 > pay_fild09 > gef_fild10 > orcsdun01 > mjolnir_08 > mjolnir_04 > gef_fild08 > gef_fild06\n\nRota 3:\npay_fild01 > pay_fild08 > pay_fild07 > pay_fild10 > mjolnir_07 > mjolnir_03 > mjolnir_08 > mjolnir_05 > gef_fild06 > ve_fild07\n\nOpções:\n0 = Desativado (padrão) \n1 = Rota 1\n2 = Rota 2\n3 = Rota 3",
         "default": "0",
-        "allowed": num_range(0, 2),
+        "allowed": num_range(0, 3),
     },
     "novoMundo": {
         "group": "Quests Misc.",
